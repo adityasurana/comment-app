@@ -8,6 +8,6 @@ you can also sign up, to sign in with your credentials
 
 Features :-
 
-Authentication, without login or after you log out, you won't be able to visit /feeback and /add-feedback page
+Authentication, without login or after you log out, you won't be able to visit /feedback and /add-feedback page
 
 Sign In, Sign Up, Seeing all Feedbacks, adding Feedbacks, Filtering Feedbacks
