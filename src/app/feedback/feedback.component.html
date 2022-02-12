@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="container" style="margin-bottom: 40px;">
+	<div style="margin-top: 50px; margin-bottom: 50px;" class="input-group">
+		<div style="margin-left: 300px; width: 450px;" class="form-outline">
+			<input
+				[(ngModel)]="searchText"
+				type="search"
+				placeholder="Search Feedbacks By Email"
+				id="form1"
+				class="form-control"
+			/>
+		</div>
+		<div style="margin-left: 80px;">
+			<button type="button" class="btn btn-primary" (click)="onShowMy()">
+				My Feedback
+			</button>
+      <button type="button" style="margin-left: 20px;" class="btn btn-primary" (click)="onShowAll()">
+				All Feedbacks
+			</button>
+		</div>
+	</div>
+	<div class="card" id="scroll">
+		<table class="table">
+			<thead class="thead bg-success">
+				<tr>
+					<th scope="col">Email</th>
+					<th scope="col">Feedback</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let feedback of Feedbacks  | searchFeedback:searchText">
+					<td>{{feedback.email}}</td>
+					<td>{{feedback.feedback}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<div style="height: 250px;">
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,54 @@
+<div class="login" style="margin-top:20px;">
+	<div class="login-form">
+		<form #authForm="ngForm" (ngSubmit)="onCreate(authForm)" class="bg-gradient">
+			<h2 class="text-center" style="color: white; margin-right: 20px;">Sign Up</h2>
+      <div class="text-center" style="margin-top: 40px;">
+				<span>
+          <span style="color: white;">Already have an account? </span>
+          <a routerLinkActive="active" routerLink="/">Sign In</a>
+        </span>
+      </div>
+			<div class="form-group">
+				<label for="email" style="color: white; margin-right: 18px;">E-Mail</label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					class="form-control"
+					ngModel
+					required
+					email
+					minlength="4"
+				/>
+			</div>
+      <div class="form-group">
+				<label for="password" style="color: white; margin-right: 18px;">Password</label>
+				<input
+					type="password"
+					id="password"
+					name="password"
+					class="form-control"
+					ngModel
+					required
+					minlength="5"
+				/>
+			</div>
+			<div class="form-group">
+				<label for="secretcode" style="color: white; margin-right: 6px;">Secret Code</label>
+				<input
+					type="number"
+					id="secretcode"
+					name="secretcode"
+					class="form-control"
+					ngModel
+					required
+				/>
+			</div>
+			<div class="form-group text-center">
+				<button type="submit" class="btn btn-primary" [disabled]="!authForm.valid">Sign Up</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+
